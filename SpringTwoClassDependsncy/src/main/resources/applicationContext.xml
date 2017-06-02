@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="Details" class="com.bridgelabz.SpringTwoClassDependsncy.Details">
+		<property name="address" value="Daltonganj" />
+		<property name="pincode" value="4512" />
+		<constructor-arg>
+			<ref bean="Student" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="Student" class="com.bridgelabz.SpringTwoClassDependsncy.Student">
+		<property name="name" value="Manoj Prasad Singh" />
+	</bean>
+
+
+
+
+
+
+</beans>
